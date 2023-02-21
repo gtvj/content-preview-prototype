@@ -1,21 +1,109 @@
-{% extends "layouts/main.html" %}
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
 
 {% block pageTitle %}
-Home – {{serviceName}} – GOV.UK Prototype Kit
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
+    <h1 class="govuk-heading-l">
+      <label class="govuk-label govuk-label--l" for="branch">
+        Which branch would you like to view?
+      </label>
     </h1>
-
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+    <form class="form" action="/choose-a-template" method="get">
+      <div class="select-a-branch">
+        <div class="govuk-form-group">
+          <div id="branch-hint" class="govuk-hint">
+            Typing will reveal matching branch names. Available branches are <a href="https://github.com/alphagov/di-authentication-frontend/branches/all">listed
+            on
+            GitHub</a>
+          </div>
+          <input class="govuk-input" id="branch" list="branches" name="branch" type="text"
+                 aria-describedby="branch-hint" required>
+          <datalist id="branches">
+            <option value="ACI-120/update-accessibility-statement">
+            <option value="ACI-121/add-cannot-scan-qr-to-auth-app-page">
+            <option value="ACI-122/update-govuk-frontend">
+            <option value="ACI-124/change-content-on-create-password-screen">
+            <option value="ACI-132/fix-node-dependencies">
+            <option value="ACI-132/update-nodejs-to-next-major-version-lts">
+            <option value="ACI-133/remove-stray-space-from-link">
+            <option value="ACI-139/add-character-limit-to-user-support-forms">
+            <option value="ACI-68/simplify_govukbutton_use">
+            <option value="ACI-69/remove-redundant-template">
+            <option value="ACI-81/correct-error-scenarios-for-email-otp">
+            <option value="ACI-88/display-email-address-following-validation-failure">
+            <option value="ACI-92/fix-input-purpose-on-enter-your-email">
+            <option value="AUT-1042/reference-straight-and-curly-quotes">
+            <option value="AUT-1042/remove-dumb-quotes">
+            <option value="AUT-1058/update-service-name-to-govuk-one-login">
+            <option value="AUT-1062/add-tests-for-translation-file-structure">
+            <option value="AUT-45/block-unwanted-http-methods">
+            <option value="AUT-512/REFERENCE/how_we_got_it_working">
+            <option value="AUT-554/make-textinput-numeric">
+            <option value="AUT-599/remote-change-email-for-reset-password">
+            <option value="AUT-599/removep-pattern-attribute-from-numeric-inputs">
+            <option value="AUT-599/send-same-email-otp-code">
+            <option value="AUT-599/update-reset-password-resend-code-content">
+            <option value="AUT-618/alternative-language-inset">
+            <option value="AUT-668/tidy-translation-file">
+            <option value="AUT-669/remove-pattern-attribute-from-numeric-inputs">
+            <option value="AUT-672/add-translations-for-ogl-and-crown-copyright">
+            <option value="AUT-690/fix-localisation-for-continue-and-back">
+            <option value="AUT-712/fix-contact-us-radio-focus-on-error">
+            <option value="AUT-714/translate-show-and-hide">
+            <option value="AUT-751/add-additional-lang-attributes-where-necessary">
+            <option value="AUT-778/update-accessibility-statement">
+            <option value="AUT-779/fix-wcag-failure-on-check-your-email-page">
+            <option value="AUT-780/fix-accessibility-issue-with-password-field">
+            <option value="AUT-782/fix-wcag-135-failure-on-password-create-field">
+            <option value="AUT-785/fix-wcag-135-failure-on-phone-number-input">
+            <option value="AUT-786/fix-wcag-reflow-failure">
+            <option value="AUT-787/fix-wcag-failure-on-auth-app-setup">
+            <option value="AUT-788/fix-accessibility-issue-with-otp-field">
+            <option value="AUT-790/accessibility-enhancement-prevent-email-overflow">
+            <option value="AUT-791/fix-accessibility-issue-with-email-field">
+            <option value="AUT-793/add-autocomplete-to-current-password-field">
+            <option value="AUT-793/add-autocomplete-to-password-field">
+            <option value="AUT-795/add-autocomplete-attribute-to-otp-field">
+            <option value="AUT-881/surface_language_in_data_layer">
+            <option value="AUT-881/update-datalayer-push-to-reflect-new-requirements">
+            <option value="AUT-883/set-password-autocomplete-off-during-exploration">
+            <option value="AUT-921/add-feature-flag-to-build">
+            <option value="AUT-921/change-subtheme-to-issue">
+            <option value="AUT-921/introduce-new-zendesk-tag">
+            <option value="AUT-921/make-app-support-forms-live">
+            <option value="AUT-921/update-support-to-include-app-options">
+            <option value="AUT-956/add-field-to-problem-proving-identity">
+            <option value="AUT-957/fix-mixed-language-bug">
+            <option value="AUT-971/update-support-forms-for-ipns">
+            <option value="BAU/add-english-text-to-language-switch-link">
+            <option value="BAU/add-lang-attribute-to-in-page-changes">
+            <option value="BAU/change-pull-request-template">
+            <option value="BAU/fix-forgotten-password-auth-app-flow">
+            <option value="BAU/get-security-codes-hint-text-accessibility">
+            <option value="BAU/move-send-message-to-translation-file">
+            <option value="BAU/replace-english-text-in-welsh-translation-file">
+            <option value="BAU/update-notification-banner-to-use-translation">
+            <option value="FIX/resend-security-code-link-consistency">
+            <option value="GUA-574-update-account-blurb">
+            <option value="PYIC-2204">
+            <option value="PYIC-2249">
+            <option value="PYIC-2074">
+            <option value="PYIC-2185">
+            <option value="PYIC-2203">
+          </datalist>
+        </div>
+        <div class="govuk-form-group">
+          {{ govukButton({
+          text: "Continue"
+          }) }}
+        </div>
+      </div>
+    </form>
   </div>
 </div>
 

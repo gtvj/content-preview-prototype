@@ -1,0 +1,21 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+Show page – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+    Content viewer
+</h1>
+<p class="govuk-body">
+  You are viewing the "Accessibility Statement for GOV.UK One Login" page on the <code>{{ data['branch'] }}</code> branch.
+</p>
+
+<iframe src="http://localhost:3002/accessibility-statement" title="Accessibility Statement for GOV.UK One Login"></iframe>
+{% endblock %}

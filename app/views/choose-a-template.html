@@ -1,0 +1,125 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row choose-a-template">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+            <label class="govuk-label govuk-label--l" for="page">
+                What page would you like to view?
+            </label>
+        </h1>
+        <form class="form" action="/show-template" method="post">
+            <div class="govuk-form-group">
+                <div id="pages-hint" class="govuk-hint">
+                    Typing will reveal pages on the <strong>{{ data['branch'] }}</strong> branch
+                </div>
+                <input class="govuk-input" id="page" list="templates" name="page" type="text"
+                       aria-describedby="pages-hint" required>
+                <datalist id="templates">
+                    <option value="A problem creating a GOV.UK One Login"/>
+                    <option value="A problem proving your identity using the GOV.UK ID Check app"/>
+                    <option value="A problem proving your identity"/>
+                    <option value="A problem signing in to your GOV.UK One Login"/>
+                    <option value="A suggestion or feedback about using your GOV.UK One Login"/>
+                    <option value="About GOV.UK One Login"/>
+                    <option value="Accessibility statement for GOV.UK One Login"/>
+                    <option value="Accessing GOV.UK One Login"/>
+                    <option value="Agree to the updated terms of use to continue"/>
+                    <option value="Another problem creating your GOV.UK One Login"/>
+                    <option value="Another problem signing in to your GOV.UK One Login"/>
+                    <option value="Another problem using your GOV.UK One Login"/>
+                    <option value="Anything else you want to tell us"/>
+                    <option value="Check your email"/>
+                    <option value="Check your phone"/>
+                    <option value="Choose how to get security codes"/>
+                    <option value="Create a GOV.UK One Login or sign in to save your progress"/>
+                    <option value="Create a GOV.UK One Login or sign in"/>
+                    <option value="Create your password"/>
+                    <option value="Deleting your GOV.UK One Login"/>
+                    <option value="Enter the 6 digit security code shown in your authenticator app"/>
+                    <option value="Enter your email address to sign in to your GOV.UK One Login"/>
+                    <option value="Enter your email address"/>
+                    <option value="Enter your mobile phone number"/>
+                    <option value="Enter your password"/>
+                    <option value="GOV.UK One Login cookies policy"/>
+                    <option value="GOV.UK One Login privacy notice"/>
+                    <option value="GOV.UK One Login terms and conditions"/>
+                    <option value="GOV.UK One Login: report a problem or give feedback"/>
+                    <option value="Get security code"/>
+                    <option value="No GOV.UK One Login found"/>
+                    <option value="Page not found"/>
+                    <option value="Problems receiving the code?"/>
+                    <option value="Prove your identity with GOV.UK One Login"/>
+                    <option value="Request a new security code"/>
+                    <option value="Reset your password"/>
+                    <option value="Returning you to the ‘[serviceName]’ service"/>
+                    <option value="Set up an authenticator app"/>
+                    <option value="Sorry, the page has expired"/>
+                    <option value="Sorry, there’s a problem with this service"/>
+                    <option value="Sorry, you cannot access GOV.UK One Login from this page"/>
+                    <option value="Sorry, you cannot go back from that page"/>
+                    <option value="Tell us what happened"/>
+                    <option value="That link has expired"/>
+                    <option value="The security code does not work"/>
+                    <option value="There was a technical problem"/>
+                    <option value="Using GOV.UK One Login"/>
+                    <option value="What are you contacting us about?"/>
+                    <option value="What do you need help with?"/>
+                    <option value="What happened?"/>
+                    <option value="What information we collect"/>
+                    <option value="What service were you trying to use?"/>
+                    <option value="What service were you trying to use?"/>
+                    <option value="What to do if you have difficulty using GOV.UK One Login"/>
+                    <option value="What were you trying to do and what happened?"/>
+                    <option value="What were you trying to do?"/>
+                    <option value="You asked to resend the security code too many times"/>
+                    <option value="You cannot enter a security code at the moment"/>
+                    <option value="You cannot get a new security code at the moment"/>
+                    <option value="You cannot reset your password at the moment"/>
+                    <option value="You cannot sign in at the moment"/>
+                    <option value="You can’t reset your password at the moment"/>
+                    <option value="You did not get a security code"/>
+                    <option value="You do not have a UK mobile phone number"/>
+                    <option value="You entered the wrong password too many times"/>
+                    <option value="You entered the wrong security code too many times"/>
+                    <option value="You had a problem linking the app to your web browser"/>
+                    <option value="You had a problem scanning your face using the GOV.UK ID Check app"/>
+                    <option value="You had a problem taking a photo of your identity document using the GOV.UK ID"/>
+                    <option value="You had a problem with an authenticator app"/>
+                    <option value="You have a GOV.UK One Login"/>
+                    <option value="You have signed out"/>
+                    <option value="You must have a photo ID to prove your identity this way"/>
+                    <option value="You must have a photo ID to prove your identity with GOV.UK One Login"/>
+                    <option value="You need to agree to the updated terms of use to save your progress"/>
+                    <option value="You tried to reset your password too many times"/>
+                    <option value="Your GOV.UK One Login cannot be found"/>
+                    <option value="Your GOV.UK email subscriptions"/>
+                    <option value="Your cookie settings were saved"/>
+                    <option value="Your message has been submitted"/>
+                    <option value="Your suggestion or feedback"/>
+                    <option value="You’ve changed your phone number or lost your phone"/>
+                    <option value="You’ve created your GOV.UK One Login"/>
+                    <option value="You’ve forgotten your password"/>
+                    <option value="You’ve reset your password"/>
+                </datalist>
+            </div>
+            <div class="govuk-form-group">
+                {{ govukButton({
+                text: "Continue"
+                }) }}
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

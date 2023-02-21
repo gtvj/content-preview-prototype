@@ -1,3 +1,4 @@
 {
-  "serviceName": "Service name goes here"
+  "serviceName": "Content previewer",
+  "port": 3002
 }

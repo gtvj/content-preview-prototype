@@ -1,0 +1,107 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <h1 class="govuk-heading-l govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+    Accessibility statement for GOV.UK One Login
+  </h1>
+
+  <p class="govuk-body">GOV.UK One Login is part of the wider GOV.UK website. There’s a separate
+    <a href="https://www.gov.uk/help/accessibility" class="govuk-link">accessibility statement for the main GOV.UK website</a>.
+  </p>
+  <p class="govuk-body">This page only contains information about GOV.UK One Login, available at www.signin.account.gov.uk.</p>
+
+  <h2 class="govuk-heading-m">
+    Using GOV.UK One Login
+  </h2>
+
+  <p class="govuk-body">GOV.UK One Login is run by the
+    <a href="https://www.gov.uk/government/organisations/government-digital-service" class="govuk-link">Government Digital Service (GDS)</a>, part of the Cabinet Office. We want as many people as possible to be able to use GOV.UK One Login. This means you should be able to:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>change colours, contrast levels and fonts</li>
+    <li>zoom in up to 300% without the text spilling off the screen</li>
+    <li>navigate most GOV.UK One Login using just a keyboard</li>
+    <li>navigate most of GOV.UK One Login using speech recognition software</li>
+    <li>listen to most of the content in GOV.UK One Login using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver)</li>
+  </ul>
+  <p class="govuk-body">We’ve also made the text in GOV.UK One Login as simple as possible to understand.</p>
+  <p class="govuk-body">
+    <a href="https://mcmw.abilitynet.org.uk/" class="govuk-link">AbilityNet</a>
+    has advice on making your device easier to use if you have a disability.
+  </p>
+
+
+  <h2 class="govuk-heading-m">
+    How accessible GOV.UK One Login is
+  </h2>
+  <p class="govuk-body">The following parts of GOV.UK One Login are not fully accessible:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>it’s not possible to stop or change the length of the time-out when you use, sign in to or create a GOV.UK One Login</li>
+    <li>it’s not possible for a screen reader to know when the emails we send are in a language other than English</li>
+    <li>one page reloads automatically after a set time limit, and it’s not possible to stop or delay this</li>
+  </ul>
+  <p class="govuk-body">We’ll update this page when issues are fixed or with information about when we plan to fix them.</p>
+
+
+  <h2 class="govuk-heading-m">
+    What to do if you have difficulty using GOV.UK One Login
+  </h2>
+  <p class="govuk-body">If you have difficulty using GOV.UK One Login,
+    <a href="/support" class="govuk-link">contact us</a>.
+  </p>
+
+  <h2 class="govuk-heading-m">
+    Report accessibility problems with GOV.UK One Login
+  </h2>
+  <p class="govuk-body">We’re always looking to improve the accessibility of GOV.UK One Login. If you find any problems not listed on this page or think we’re not meeting accessibility requirements,
+    <a href="/support" class="govuk-link">contact us</a>.
+  </p>
+
+  <h2 class="govuk-heading-m">
+    Enforcement procedure
+  </h2>
+  <p class="govuk-body">The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the ‘accessibility regulations’).</p>
+  <p class="govuk-body">If you’re not happy with how we respond to your complaint,
+    <a href="https://www.equalityadvisoryservice.com/" class="govuk-link">contact the Equality Advisory and Support Service (EASS)</a>.
+  </p>
+
+  <h2 class="govuk-heading-m">
+    Technical information about GOV.UK One Login’s accessibility
+  </h2>
+  <p class="govuk-body">The Government Digital Service is committed to making GOV.UK One Login accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.</p>
+
+  <h3 class="govuk-heading-s">
+    Compliance status
+  </h3>
+  <p class="govuk-body">GOV.UK One Login is partially compliant with the
+    <a href="https://www.w3.org/TR/WCAG21/" class="govuk-link">Web Content Accessibility Guidelines version 2.1</a>
+    AA standard, due to the non-compliances listed below.
+  </p>
+
+  <h2 class="govuk-heading-m">
+    Non-accessible content
+  </h2>
+  <p class="govuk-body">The content listed below is non-accessible for the following reasons.</p>
+
+  <h3 class="govuk-heading-s">
+    Non compliance with the accessibility regulations
+  </h3>
+  <p class="govuk-body">When you create a GOV.UK One Login or sign in, if you do not do anything for 2 hours, the process will stop (time out) or you’ll be signed out. It’s not possible to adjust, extend or turn off the time out. This fails WCAG 2.1 success criterion 2.2.1 (Timing Adjustable).</p>
+
+  <h2 class="govuk-heading-m">
+    What we’re doing to improve accessibility
+  </h2>
+  <p class="govuk-body">We’ll update this page when issues are fixed, when we expect them to be fixed or when new problems are identified.</p>
+
+  <h2 class="govuk-heading-m">
+    Preparation of this accessibility statement
+  </h2>
+  <p class="govuk-body">This statement was prepared on 4 November 2020. It was last reviewed on 29 June 2022.</p>
+  <p class="govuk-body">GOV.UK One Login was last tested on 13 June 2022. The test was carried out by the Digital Accessibility Centre (DAC), who produced an accessibility audit report on 17 June 2022. DAC assessed GOV.UK One Login against the Web Content Accessibility Guidelines WCAG 2.1.</p>
+
+{% endblock %}
